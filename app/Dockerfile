@@ -20,7 +20,7 @@ RUN apt-get update \
   && docker-php-ext-install pdo_mysql
 
 # install Node 13.x
-RUN curl -sL https://rpm.nodesource.com/setup_13.x | bash -
+# RUN curl -sL https://rpm.nodesource.com/setup_13.x | bash -
 RUN apt-get install nodejs -y
 
 # Laravelで必要になるmodRewriteを有効化する

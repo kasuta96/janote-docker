@@ -8,7 +8,7 @@ services:
    ports:
      - "8001:80"
    # 先ほど作ったDockerfileを使って、コンテナをビルドするという指定
-   build: ./docker/app
+   build: ./app
    # コンテナの名前を指定
    container_name: laravel_app
    # コンテナとホスト側のディレクトリを同期する場所の指定。laravelのソースが入る予定の場所
@@ -25,12 +25,12 @@ services:
     MYSQL_DATABASE: ${MYSQL_DATABASE}
     MYSQL_USER: ${MYSQL_USER}
     MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-     TZ: 'Asia/Tokyo'
+    TZ: 'Asia/Tokyo'
    # 起動時のコマンド
    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
    # ディレクトリ同期。設定ファイルとMySQLのデータが保存される場所を同期している。コンテナは基本的に起動時に変更されてもコンテナ自体が止まるとデータが消えてしまうため、保存しておきたいものはホストマシンと同期しておく必要がある。
    volumes:
-     - ./docker/db/data:/var/lib/mysql
-     - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+     - ./db/data:/var/lib/mysql
+     - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
    ports:
      - 3307:3306
