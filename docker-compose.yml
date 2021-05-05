@@ -6,7 +6,7 @@ services:
  app:
    # どのポートを開いて繋ぐか。下記はコンテナの80番ポートを開いて、ホストの8000番につなぐ
    ports:
-     - "8001:80"
+     - "8010:80"
    # 先ほど作ったDockerfileを使って、コンテナをビルドするという指定
    build: ./app
    # コンテナの名前を指定
@@ -14,6 +14,12 @@ services:
    # コンテナとホスト側のディレクトリを同期する場所の指定。laravelのソースが入る予定の場所
    volumes:
      - ./src:/var/www/html
+   tty: true
+   stdin_open: true
+   depends_on:
+     - db
+   links:
+     - db
  # MySQLを動かすコンテナ
  db:
    # Docker HubからMySQL5.7の公式イメージをダウンロードしてくる指定
@@ -33,4 +39,4 @@ services:
      - ./db/data:/var/lib/mysql
      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
    ports:
-     - 3307:3306
+     - 3310:3306
