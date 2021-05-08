@@ -6,8 +6,8 @@ cd janote-docker
 ```
 
 .env.example -> rename to .env and edit
-  MYSQL_ROOT_PASSWORD= [password]
-  MYSQL_PASSWORD= [password]
+ > MYSQL_ROOT_PASSWORD= [password]
+ > MYSQL_PASSWORD= [password]
 ```
 docker-compose build
 docker-compose up -d
@@ -18,10 +18,10 @@ cd janote
 ```
 
 src/janote/.env.example  -> rename to .env and edit:
-  APP_NAME=janote
-  DB_HOST=db
-  DB_DATABASE=janote
-  DB_PASSWORD= [password]
+> APP_NAME=janote
+> DB_HOST=db
+> DB_DATABASE=janote
+> DB_PASSWORD= [password]
 ```
 php artisan migrate
 ```
