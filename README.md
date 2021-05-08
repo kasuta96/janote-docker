@@ -20,4 +20,4 @@ src/janote/.env.example  -> rename to .env and add db password
 ```
 php artisan migrate
 ```
-go http://localhost:8010/
+go http://localhost:8000/
