@@ -1,7 +1,7 @@
 # janote-docker
 
-git clone https://github.com/kasuta96/janote-docker.git
 ```
+git clone https://github.com/kasuta96/janote-docker.git
 cd janote-docker
 ```
 
