@@ -5,7 +5,7 @@ git clone https://github.com/kasuta96/janote-docker.git
 cd janote-docker
 ```
 
-rename to .env and edit db infomation: .env.example
+.env.example -> rename to .env and add db password
 
 ```
 docker-compose build
@@ -16,7 +16,7 @@ composer create-project --prefer-dist laravel/laravel janote "6.*"
 cd janote
 ```
 
-rename to .env and edit db infomation: src/janote/.env.example
+src/janote/.env.example  -> rename to .env and add db password
 ```
 php artisan migrate
 ```
