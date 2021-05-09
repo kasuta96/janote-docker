@@ -40,3 +40,12 @@ services:
      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
    ports:
      - 3310:3306
+     
+ phpmyadmin:
+   image: phpmyadmin/phpmyadmin
+   container_name: phpmyadmin
+   environment:
+     - PMA_ARBITRARY=1
+   restart: always
+   ports:
+     - 8080:80
