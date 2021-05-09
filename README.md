@@ -25,5 +25,5 @@ src/janote/.env.example  -> rename to .env and edit:
 ```
 php artisan migrate
 ```
-app http://localhost:8000/
-phpMyAdmin http://localhost:8080/
+- app http://localhost:8000/
+- phpMyAdmin http://localhost:8080/
