@@ -27,3 +27,7 @@ php artisan migrate
 ```
 - app http://localhost:8000/
 - phpMyAdmin http://localhost:8080/
+
+# M1チップ対応のため追記
+- dbに追加：
+platform: linux/x86_64 
